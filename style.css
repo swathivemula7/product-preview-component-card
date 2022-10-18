@@ -1,0 +1,148 @@
+/* ### Primary
+
+- Dark cyan: hsl(158, 36%, 37%)
+- Cream: hsl(30, 38%, 92%)
+
+### Neutral
+
+- Very dark blue: hsl(212, 21%, 14%)
+- Dark grayish blue: hsl(228, 12%, 48%)
+- White: hsl(0, 0%, 100%) */
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.image img{
+    max-width: 100%;
+} 
+
+body{
+    font-size: 14px;
+    font-family: "Montserrat",sans-serif;
+    background-color: hsl(30, 38%, 92%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 0.1px);
+    margin: 0 1.5rem;
+}
+
+h1{
+    color: hsl(212, 21%, 14%);
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+h2{
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: hsl(228, 12%, 48%);
+    margin-bottom: 1rem;
+    letter-spacing: 0.2rem;
+}
+
+p{
+    color: hsl(228, 12%, 48%);
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+.price{
+    color: hsl(158, 36%, 37%);
+}
+
+.image img{
+    border-radius: 1rem 1rem 0 0;
+}
+
+.content{
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 0 0 1rem 1rem;
+    margin-top: -1rem;
+}
+
+.card{
+    max-width: 600px;
+}
+
+ul{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.card ul li:first-child{
+    font-size: 2rem;
+    margin-right: 1.5rem;
+}
+
+.card ul li:last-child{
+    color: hsl(228, 12%, 48%);
+}
+
+.content button{
+    background-color: hsl(158, 36%, 37%);
+    color: #fff;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 0.625rem 2rem;
+    width: 100%;
+    border: none;
+    border-radius: 0.625rem;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+ 
+.content button:hover{
+    background-color: hsl(158, 39%, 17%);
+}
+
+.content button img{
+    margin-right: 0.5rem;
+}
+
+button,li{
+    font-family: inherit;
+}
+
+h1,.price{
+    font-family: "Fraunces",serif;
+}
+
+
+@media(min-width: 640px){
+    .card{
+        display: grid;
+        grid-template-columns: repeat(2,1fr)
+    }
+    .image img{
+        border-radius: 0.625rem 0 0 0.625rem;
+        width: 100%;
+    }
+    .content{
+        border-radius: 0 0.625rem 0.625rem 0;
+        margin-top: 0;
+        padding: 1.5rem 1.5rem 0;
+        height: 99%
+    }
+    .card p{
+        margin-bottom: 1rem;
+    }
+    picture img{
+        height: 100%;
+    }
+}
